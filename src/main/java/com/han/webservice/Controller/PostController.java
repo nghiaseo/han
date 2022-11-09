@@ -17,6 +17,7 @@ public class PostController {
     PostController(PostRepo postRepo){
         this.postRepo = postRepo;
     }
+    @CrossOrigin(origins = "*")
     @GetMapping("/posts")
     List<Post> allPosts(){
         return postRepo.findAll();

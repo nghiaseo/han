@@ -1,0 +1,4 @@
+spring:
+  jpa:
+    properties:
+      dll-auto: update

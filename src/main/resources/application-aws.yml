@@ -1,0 +1,6 @@
+server.port: 5000
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-3-220-207-90.compute-1.amazonaws.com:5432/d9p7dh29u1g4g8
+    username: bwmydgfelmzkpr
+    password: 3b9f5031409dc076531034973e734cd6d106bb7052708ea152589b97bb417226

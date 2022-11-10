@@ -22,6 +22,7 @@ public class PostController {
     List<Post> allPosts(){
         return postRepo.findAll();
     }
+    @CrossOrigin(origins = "*")
     @GetMapping("/posts/{id}")
     public ResponseEntity singlePost(@PathVariable Long id){
         Optional<Post> post = this.postRepo.findById(id);
@@ -32,10 +33,12 @@ public class PostController {
             return  ResponseEntity.status(HttpStatus.NOT_FOUND).body("Post with id "+id+" not found !");
         }
     }
+    @CrossOrigin(origins = "*")
     @PostMapping("/posts")
     Post newPost(@RequestBody Post newPost){
         return postRepo.save(newPost);
     }
+    @CrossOrigin(origins = "*")
     @PutMapping("/posts")
     public ResponseEntity updatePost(@RequestBody Post editPost){
         Optional<Post> post = this.postRepo.findById(editPost.getId());
